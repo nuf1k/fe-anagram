@@ -1,10 +1,11 @@
 import { useState } from "react";
-import AnagramForm from "./components/Anagram";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import Wordbase from "./components/Wordbase";
+import Anagram from "./components/Anagram";
 
 function App() {
+  // decides which form should currently be displayed
   const [currentForm, setCurrentForm] = useState("Anagram");
 
   return (
@@ -14,7 +15,7 @@ function App() {
         <Button onClick={() => setCurrentForm("Link")}>Submit wordbase</Button>
       </div>
       <Card>
-        {currentForm === "Anagram" && <AnagramForm />}
+        {currentForm === "Anagram" && <Anagram />}
         {currentForm === "Link" && <Wordbase />}
       </Card>
     </div>
