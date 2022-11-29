@@ -30,18 +30,11 @@ export default function Anagram() {
       })
       .then(function (response) {
         setSearchResults(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   }
-
-  const displayedResults = searchResults.map(
-    (result) => `<td>${result["original_word"]}</td>`
-  );
-
-  console.log(displayedResults);
 
   return (
     <>
