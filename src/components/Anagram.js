@@ -19,6 +19,7 @@ export default function Anagram() {
 
     // make API request with new word
     const results = await fetchAnagrams(parsedWord);
+    console.log(results);
     setSearchResults(results);
   }
 
